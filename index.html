@@ -4,6 +4,7 @@
     
 <head>
     <title>Check the Weather!</title>
+    <meta charset="utf-8"> 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">   
     <link href="style.css" rel="stylesheet"> 
@@ -11,13 +12,22 @@
 </head>
 
 <body>
-    <div class="intro-card" "center-block">
-        <h1>What's the weather like today?</h1>
-        <h2>Should you bring a jacket?</h2>
-            <label for="location">Where are you today?</label>
-            <input type="text" id="location">
-        <button id="show">Show me the weather!</button>
-    </div>
+    <div class="intro-card">
+        <header>
+            <input type="text" id="location" class="search-box" placeholder="Where are you today?">
+        </header>
+        <main>
+            <section class="location">
+                <div class="city"></div>
+                <div class="date"></div> 
+            </section>
+            <section class="weather">
+                <div class="temp"></div>
+                <div class="sky"></div>
+                <div class="hi-low"></div>
+            </section>
+        </main>
+    </div>  
 
 
 </body>
