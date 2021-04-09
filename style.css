@@ -15,10 +15,8 @@ body {
 .intro-card{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+    
 }
 
 header {
@@ -35,7 +33,7 @@ header input {
     border: none;
     text-align: center;
     outline: none;
-    border-radius: 0px 20px 0px 20px;
+    border-radius: 5px;
     background-color: #B1B4C5;
     font-size: 20px;
     transition: 0.2 ease-out;
@@ -47,14 +45,21 @@ header input:focus {
 
 main{
     flex: 1 1 100%;
-    margin-top: 50px;
-    margin-bottom:50px;
-    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
 }
+
+.weather-card{
+    padding: 50px;
+    margin-top: 25px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1));
+    visibility: hidden;
+    border-radius: 5px;
+}
+
 
 .location .city {
     color: #FAE2E3;
@@ -84,5 +89,6 @@ main{
 .weather .hi-low {
     color: #FAE2E3;
     font-size: 24px;
-
 }
+
+

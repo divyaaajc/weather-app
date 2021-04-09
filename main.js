@@ -25,6 +25,9 @@ const getWeather = async() => {
 }
 
 const displayResults = (weather) => {
+    let container = document.querySelector(".weather-card");
+    container.style.visibility = "visible";
+
     let city = document.querySelector(".location .city");
     city.innerText = `${weather.name}, ${weather.sys.country}`;
 
