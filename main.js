@@ -48,7 +48,6 @@ const displayResults = (weather) => {
     let icon = document.querySelector(".icon");
     let iconCode = weather.weather[0].icon;
     faIcon = iconsConverter(iconCode);
-    console.log(faIcon);
     icon.innerHTML = `${faIcon}`;
 }
 
