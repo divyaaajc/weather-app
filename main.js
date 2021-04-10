@@ -6,7 +6,7 @@ searchBox.addEventListener("keypress", function(key) {
     if (key.keyCode === 13 ){
         getWeather(searchBox.value).then(displayResults);
     }
-})
+});
 
 
 
@@ -46,9 +46,10 @@ const displayResults = (weather) => {
     hiLow.innerText = `${weather.main.temp_min}°C / ${weather.main.temp_max}°C`;
 
     let icon = document.querySelector(".icon");
-    let iconUrl = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
-    icon.innerHTML = `<img src="${iconUrl}">`;
-    console.log(iconUrl);
+    let iconCode = weather.weather[0].icon;
+    faIcon = iconsConverter(iconCode);
+    console.log(faIcon);
+    icon.innerHTML = `${faIcon}`;
 }
 
 const dateBuilder = (d) => {
@@ -63,6 +64,50 @@ const dateBuilder = (d) => {
     return `${day} ${date} ${month} ${year}`;
 }
 
+
+const iconsConverter = (iconCode) => {
+    let icon = iconCode;
+    switch(icon) {
+        case("01d"):
+            return `<i class="fa fa-sun"></i>`;
+            break;
+        case("02d"):
+            return `<i class="fa fa-cloud-sun"></i>`;
+            break;
+        case("03d" || "03n"):
+            return `<i class="fa fa-cloud"></i>`;
+            break;
+        case("04d" || "04n"):
+            return `<i class="fa fa-cloud-meatball"></i>`;
+            break;
+        case("09d"):
+            return `<i class="fa fa-cloud-sun-rain"></i>`;
+            break;
+        case("10d" || "10n"):
+            return `<i class="fa fa-cloud-rain"></i>`;
+            break;
+        case("11d" || "11n"):
+            return `<i class="fa fa-cloud-showers-heavy bolt"></i>`;
+            break;
+        case("13d" || "13n"):
+            return `<i class="fa fa-snowflake"></i>`;
+            break;
+        case("50d" || "50n"):
+            return `<i class="fa fa-cloud-smog"></i>`;
+            break;
+        case("01n"):
+            return `<i class="fa fa-moon"></i>`;
+            break;
+        case("02d"):
+            return `<i class="fa fa-cloud-moon"></i>`;
+            break;
+        case("09n"):
+            return `<i class="fa fa-cloud-moon-rain"></i>`;
+            break;
+        default:
+            return;
+    }
+}
 
 
 
