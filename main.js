@@ -97,7 +97,7 @@ const iconsConverter = (iconCode) => {
         case("01n"):
             return `<i class="fa fa-moon"></i>`;
             break;
-        case("02d"):
+        case("02n"):
             return `<i class="fa fa-cloud-moon"></i>`;
             break;
         case("09n"):
