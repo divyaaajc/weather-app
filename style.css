@@ -99,7 +99,12 @@ main{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-        header
+        header input {
+            font-size: 52px;
+            min-width: 700px;
+            margin: 70px;
+            height: 125px;
+        }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
