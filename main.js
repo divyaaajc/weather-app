@@ -73,25 +73,31 @@ const iconsConverter = (iconCode) => {
         case("02d"):
             return `<i class="fa fa-cloud-sun"></i>`;
             break;
-        case("03d" || "03n"):
+        case("03d"):
+        case("03n"):
             return `<i class="fa fa-cloud"></i>`;
             break;
-        case("04d" || "04n"):
+        case("04d"):
+        case("04n"):
             return `<i class="fa fa-cloud-meatball"></i>`;
             break;
         case("09d"):
             return `<i class="fa fa-cloud-sun-rain"></i>`;
             break;
-        case("10d" || "10n"):
+        case("10d"):
+        case("10n"):
             return `<i class="fa fa-cloud-rain"></i>`;
             break;
-        case("11d" || "11n"):
+        case("11d"):
+        case("11n"):
             return `<i class="fa fa-cloud-showers-heavy bolt"></i>`;
             break;
-        case("13d" || "13n"):
+        case("13d"):
+        case("13n"):
             return `<i class="fa fa-snowflake"></i>`;
             break;
-        case("50d" || "50n"):
+        case("50d"):
+        case("50n"):
             return `<i class="fa fa-cloud-smog"></i>`;
             break;
         case("01n"):
@@ -104,7 +110,7 @@ const iconsConverter = (iconCode) => {
             return `<i class="fa fa-cloud-moon-rain"></i>`;
             break;
         default:
-            return;
+            return "-";
     }
 }
 
