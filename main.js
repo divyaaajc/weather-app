@@ -18,6 +18,7 @@ const getWeather = async() => {
         if (response.ok){
             jsonResponse = await response.json();
             return jsonResponse;
+            console.log(jsonResponse)
         }
     } catch(error) {
         console.log(error);
@@ -39,10 +40,15 @@ const displayResults = (weather) => {
     temp.innerHTML = `${Math.round(weather.main.temp)}°C`;
 
     let sky = document.querySelector(".weather .sky");
-    sky.innerText = weather.weather[0].main;
+    sky.innerText = weather.weather[0].description;
 
     let hiLow = document.querySelector(".hi-low");
     hiLow.innerText = `${weather.main.temp_min}°C / ${weather.main.temp_max}°C`;
+
+    let icon = document.querySelector(".icon");
+    let iconUrl = `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
+    icon.innerHTML = `<img src="${iconUrl}">`;
+    console.log(iconUrl);
 }
 
 const dateBuilder = (d) => {
